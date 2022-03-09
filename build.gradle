@@ -2,6 +2,15 @@
 plugins {
     id 'com.android.application' version '7.1.2' apply false
     id 'com.android.library' version '7.1.2' apply false
+    id "org.sonarqube" version "3.3"
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "SE2-group-Singh_demo-repo"
+    property "sonar.organization", "se2-group-singh"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
 }
 
 task clean(type: Delete) {
